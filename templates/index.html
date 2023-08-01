@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title><b>Simple Calculator</b> <img src="/images/img1.png" alt=""></title>
+
+    <style>
+      html {
+        font-size: 22px;
+      }
+      body {
+        background-color: #333;
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simple Calculator</h1>
+    <form action="/calculate" method="post">
+      <input
+        type="text"
+        name="expression"
+        placeholder="Enter expression"
+        required
+      />
+      <button type="submit">Calculate</button>
+    </form>
+    {% if result %}
+    <p>Result: {{ result }}</p>
+    {% endif %}
+  </body>
+</html>
